@@ -1,14 +1,9 @@
 package mp.utp.xyz.controllers.main;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import mp.utp.xyz.controllers.BaseController;
-import mp.utp.xyz.database.DbConnection;
 
 public class RecibirProductoController extends BaseController implements Initializable
 {
@@ -122,14 +116,6 @@ public class RecibirProductoController extends BaseController implements Initial
 
 		//Set Cantidad;
 		cantidadOk = cantidadTotal - cantidadBrk;
-
-		/*
-		String sql = "SELECT COUNT(ID) AS total FROM Items";
-
-			ResultSet rs = this.c.createStatement().executeQuery(sql);
-
-			int total2 = rs.getInt("total");
-		 */
 
 		//Query
 		String sql = "INSERT INTO Items VALUES (null, %d, %d, %d, '%s', '%s')";

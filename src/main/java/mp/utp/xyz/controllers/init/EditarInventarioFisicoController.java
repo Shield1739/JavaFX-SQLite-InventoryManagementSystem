@@ -1,9 +1,6 @@
 package mp.utp.xyz.controllers.init;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
@@ -21,7 +18,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
 import mp.utp.xyz.controllers.BaseController;
 import mp.utp.xyz.data.ItemTableData;
-import mp.utp.xyz.database.DbConnection;
 import mp.utp.xyz.database.DbUtilities;
 
 public class EditarInventarioFisicoController extends BaseController implements Initializable
