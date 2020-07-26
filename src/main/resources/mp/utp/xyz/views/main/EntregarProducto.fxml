@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp.utp.xyz.controllers.main.EntregarProductoController">
+	<children>
+		<Text layoutX="164.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entregar Producto">
+			<font>
+				<Font name="System Bold" size="20.0" />
+			</font>
+		</Text>
+		<TableView fx:id="tableView" layoutX="9.0" layoutY="56.0" prefHeight="284.0" prefWidth="482.0">
+			<columns>
+				<TableColumn fx:id="idItemColumn" prefWidth="33.0" text="ID" />
+				<TableColumn fx:id="idProductoColumn" prefWidth="101.0" text="ID PRODUCTO" />
+				<TableColumn fx:id="cntOkColumn" minWidth="6.0" prefWidth="63.0" text="CNT OK" />
+            <TableColumn fx:id="fabricadoColumn" prefWidth="84.0" text="FABRICADO" />
+            <TableColumn fx:id="venceColumn" prefWidth="66.0" text="VENCE" />
+			</columns>
+		</TableView>
+		<Button layoutX="314.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleGuardarButton" text="Entregar" />
+      <Label fx:id="fieldLabel" layoutX="387.0" layoutY="360.0" prefHeight="27.0" prefWidth="77.0" />
+      <Text layoutX="14.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD A ENTREGAR" wrappingWidth="183.09375">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cantidadField" layoutX="194.0" layoutY="361.0" prefHeight="25.0" prefWidth="113.0" />
+      <Button fx:id="atrasButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAtrasButton" text="Atras" />
+	</children>
+</AnchorPane>
