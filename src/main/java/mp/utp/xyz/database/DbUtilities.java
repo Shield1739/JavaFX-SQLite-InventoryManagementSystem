@@ -156,7 +156,7 @@ public class DbUtilities
 				data.add(row);
 			}
 
-			//FINALLY ADDED TO TableView
+			//add to tableview
 			tableView.setItems(data);
 		}
 		catch (SQLException throwables)

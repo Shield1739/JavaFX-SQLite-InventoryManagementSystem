@@ -123,7 +123,7 @@ public class RecibirProductoController extends BaseController implements Initial
 		dbUtilities.updateTable(sql);
 
 		String sql2 = "UPDATE Semana SET CantidadRecibidaOk = CantidadRecibidaOk + %d, CantidadRecibidaBRK = CantidadRecibidaBRK + %d WHERE ID = %d";
-		sql2 = String.format(sql2, cantidadOk, cantidadOk, id);
+		sql2 = String.format(sql2, cantidadOk, cantidadBrk, id);
 		dbUtilities.updateTable(sql2);
 
 		setLabel("AGREGADO", Color.GREEN);

@@ -120,7 +120,7 @@ public class EntregarProductoController extends BaseController implements Initia
 		dbUtilities.updateTable(sql);
 
 		String sql2 = "UPDATE Semana SET CantidadEntregada = CantidadEntregada + %d WHERE ID = %d";
-		sql2 = String.format(sql2, cantidadEntregar, tableData.getIdItem());
+		sql2 = String.format(sql2, cantidadEntregar, tableData.getIdProducto());
 		dbUtilities.updateTable(sql2);
 
 		setLabel("GUARDADO", Color.GREEN);

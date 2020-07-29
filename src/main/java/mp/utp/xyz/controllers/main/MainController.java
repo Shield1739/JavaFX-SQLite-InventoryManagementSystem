@@ -143,7 +143,7 @@ public class MainController extends BaseController implements Initializable
 			"SELECT p.ID, p.Nombre, i.ID AS 'Item ID', FechaVencimiento AS 'Fecha Vencimiento', " +
 				"Cast ((JulianDay(FechaVencimiento) - JulianDay('" + this.fechaHoy.toString() + "')) AS Integer) AS 'Dias Hasta Expirar' " +
 				"FROM Productos p INNER JOIN Items i ON p.ID = i.ProductoID " +
-				"WHERE FechaVencimiento != 'null' AND [Dias Hasta Expirar] < 30";
+				"WHERE FechaVencimiento != 'null' AND [Dias Hasta Expirar] < 30 AND [Dias Hasta Expirar] > -1";
 		buildTable(sql);
 	}
 
